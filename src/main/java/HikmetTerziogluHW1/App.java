@@ -66,7 +66,7 @@ public class App {
         //logger.error("Current port number:" + port);
 
         
-        port(getHerokuAssignedPort());
+        //port(getHerokuAssignedPort());
         
         
         get("/", (req, res) -> "Hello, World!!!");
@@ -117,7 +117,7 @@ public class App {
        // System.out.println(new App().getGreeting());
     }
 
-
+/*
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
@@ -125,7 +125,7 @@ public class App {
         }
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
-
+*/
     
     
 
