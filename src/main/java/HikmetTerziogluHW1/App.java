@@ -5,14 +5,14 @@ package HikmetTerziogluHW1;
 import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
-import static spark.Spark.port
+import static spark.Spark.port;
 
-
-
-
+import java.lang.System.Logger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.LogManager;
+
 
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
@@ -60,10 +60,10 @@ public class App {
         return true;
     }
     public static void main(String[] args) {
-        Logger logger = LogManager.getLogger(App.class);
+       // Logger logger = LogManager.getLogger(App.class);
         int port = Integer.parseInt(System.getenv("PORT"));
         port(port);
-        logger.error("Current port number:" + port);
+        //logger.error("Current port number:" + port);
 
         
         port(getHerokuAssignedPort());
